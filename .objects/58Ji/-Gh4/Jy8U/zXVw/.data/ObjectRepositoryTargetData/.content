@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qWAsTSCHekGRYeGykamfjw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="21, 144, 24, 24" ElementType="Button" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java name='Open Folder*' role='push button' /&gt;" Guid="0e5a0145-155d-4981-b12e-777be0f9185b" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="95329f6635aa496ba0778c59ef0e1d8c.jpg" xmlns="">0toxpEOJ38U2av9cpBAwTNw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

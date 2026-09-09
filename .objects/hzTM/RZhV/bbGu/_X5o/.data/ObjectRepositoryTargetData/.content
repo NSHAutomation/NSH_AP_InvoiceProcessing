@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xuM3nMH8HkOvADd5WVzo-Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="451, 464, 88, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd title='&amp;amp;Save' aaname='Save' cls='Button' /&gt;" Guid="df62a3a8-a71d-440a-b36b-ac3499babeda" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='*' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5e8296c10663a0b54b12169e7be35501.jpg" xmlns="">03TqHd1LLV06bo8RAx-8bPg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Oracle Applications - NMDBP",
+  "Type": "App",
+  "Id": "58JivOi4W0W562ktetUYtQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/58JivOi4W0W562ktetUYtQ",
+  "Created": "2026-08-13T12:41:41.0739563Z",
+  "Updated": "2026-08-13T12:41:41.0739563Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

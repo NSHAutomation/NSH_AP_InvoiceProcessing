@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Login - Google Chrome",
+  "Type": "Screen",
+  "Id": "Jcuq3dengUmqwY-WoFTyqQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/Jcuq3dengUmqwY-WoFTyqQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/RZhVY6FYGEGRXLrVwZj4Lg",
+  "Created": "2026-08-13T06:50:05.6244574Z",
+  "Updated": "2026-08-13T06:50:05.6244574Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

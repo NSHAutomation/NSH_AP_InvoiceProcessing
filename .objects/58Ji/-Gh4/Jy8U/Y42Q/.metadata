@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Batch Name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Y42QK51WRkyYi2AZi4KSeg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/Y42QK51WRkyYi2AZi4KSeg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T12:54:04.6628962Z",
+  "Updated": "2026-08-14T12:54:04.6628962Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2wPJFezW306F50gztLLdRg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="248, 265, 115, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Find Expected Receipts *' role='internal frame' /&gt;&lt;java name='Supplier and Internal' role='page tab' /&gt;&lt;java name='Purchase Order' role='text' /&gt;" Guid="b1968fc1-c507-4452-8f57-b4b760e12bfb" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="ed67263ffba71a304b59e44de041bc97.jpg" xmlns="">00v2ECbdaM0-pdKqG9du87g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

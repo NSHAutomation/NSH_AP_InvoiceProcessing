@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8sTab6-K-EuOJNRe-A8d2g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/AppsLocalLogin.jsp" DesignTimeRectangle="894, 504, 56, 30" ElementType="Button" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Log In' /&gt;" Guid="ad3aad6e-000f-4556-a9bf-4258d3625bb1" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="5e643017b67bc24b3289fdd41392ef45.jpg" xmlns="">0B8iF5jFERUyOzSMrLGh8JA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

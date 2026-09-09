@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Tax Status",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "yyAOBMOi2kGrpT8W3wXtnA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/yyAOBMOi2kGrpT8W3wXtnA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T06:42:20.1349492Z",
+  "Updated": "2026-08-17T06:42:20.1349492Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

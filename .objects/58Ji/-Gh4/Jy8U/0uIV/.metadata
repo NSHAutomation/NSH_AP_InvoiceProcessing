@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Calculate Tax alt u",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "0uIVktn5HkayjE5OKXKaYw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/0uIVktn5HkayjE5OKXKaYw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T19:13:25.1710285Z",
+  "Updated": "2026-08-16T19:13:25.1710285Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

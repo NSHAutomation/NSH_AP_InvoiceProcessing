@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-mykLA7OLkCPviFVE5eFQg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1901, 156, 19, 240" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Purchase Order Headers' role='internal frame' /&gt;&lt;java cls='LWScrollbar' role='scroll bar' /&gt;" Guid="5ebadfd8-105a-46d3-940a-a3eb59310456" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b2f38b3e4119713685bad68f6ec3bff9.jpg" xmlns="">0pgMw6wFiaE6m9DLYjb4JoA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScroll</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

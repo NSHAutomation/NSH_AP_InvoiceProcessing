@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Attachments...",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "inKrFSktg0i9UZ_uBfChNg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/inKrFSktg0i9UZ_uBfChNg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T10:36:22.0579056Z",
+  "Updated": "2026-08-17T10:36:22.0579056Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

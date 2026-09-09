@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Rate Name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "ca_DlORKC0O51SEKlLAILw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/ca_DlORKC0O51SEKlLAILw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T19:20:50.9133Z",
+  "Updated": "2026-08-16T19:20:50.9133Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

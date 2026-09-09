@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zD0U9ZVqpUGhEQ-_PrTIEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="40, 156, 240, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Batches (AP Payment - NMI)' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Batch Name*' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="87ef7c32-0ebd-4fa5-b4b7-fa2655c1fa2a" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="40, 132, 240, 24" ElementType="Text" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Batches (AP Payment - NMI)' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java cls='FolderPrompt' role='text' check:text='Batch Name' /&gt;" Guid="e2eeaf77-8704-4ac6-b3fa-97ad3a42c64e" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5ff2e6a56d1966cd831c932aff2052d5.jpg" xmlns="">09bGJ4KAY1kKJvk2TI8BmRw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Payment Method",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "hr2Tdk-lS0ufc0u33WLpJg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/hr2Tdk-lS0ufc0u33WLpJg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T18:04:07.0531311Z",
+  "Updated": "2026-08-16T18:04:07.0531311Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Name": "PO Header-Matched Amount Table Maximize",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "7x2CEF-AjEWsKcfofvgEJw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/7x2CEF-AjEWsKcfofvgEJw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-23T09:01:56.2181936Z",
+  "Updated": "2026-08-23T09:10:02.7847134Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

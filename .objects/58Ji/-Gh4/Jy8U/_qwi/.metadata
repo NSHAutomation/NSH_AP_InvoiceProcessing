@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Input-Responsibilities",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "_qwiLeHNpkO9EeZePgFetA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/_qwiLeHNpkO9EeZePgFetA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-13T12:43:57.2554688Z",
+  "Updated": "2026-08-14T12:48:44.7287916Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

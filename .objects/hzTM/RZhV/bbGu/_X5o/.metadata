@@ -1,0 +1,13 @@
+﻿{
+  "Name": "&Save",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "_X5oPXLry0qo-BE0_mcT_Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/_X5oPXLry0qo-BE0_mcT_Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg",
+  "Created": "2026-08-13T07:43:36.6409051Z",
+  "Updated": "2026-08-13T07:43:36.6409051Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

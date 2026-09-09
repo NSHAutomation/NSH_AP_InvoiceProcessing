@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="G5i23RwqFU2gMnBkTey7sg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="587, 380, 111, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='PO Headers' role='internal frame' /&gt;&lt;java name='Context' role='label' /&gt;" Guid="5f13c2e5-955f-4027-8c7e-ec0f97153081" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="762bafaede7ab928b1a9aae51ff858f3.jpg" xmlns="">0I4DfkWytTUGRPJBluA9IAg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

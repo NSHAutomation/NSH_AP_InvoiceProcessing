@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="O6NuRGoyyU-e1YJNNnSqRQ" Reference="qUD_TysPEUmxCPTTCdyhAg/kTGVhT_RdECxkXdmbzDyqA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="695, 562, 125, 29" ElementType="Button" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Find*' role='push button' /&gt;" Guid="b38220f0-e24e-413e-acb5-60178fb06666" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="80e54164d73500122321c698ccf094f8.jpg" xmlns="">0j58QdchHvE-zqbavpsD6RQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

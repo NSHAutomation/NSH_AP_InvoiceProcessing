@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Show Field... mnemonic F",
+  "Type": "Element",
+  "Id": "8Qnu3ClxzU6tosB6xsG85g",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/8Qnu3ClxzU6tosB6xsG85g",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T13:03:25.1249375Z",
+  "Updated": "2026-08-14T13:03:25.1249375Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

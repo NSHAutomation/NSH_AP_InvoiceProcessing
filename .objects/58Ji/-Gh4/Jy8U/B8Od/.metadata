@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Close PurchaseRequisition",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "B8OdEp8X706FpEvPzhAyfQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/B8OdEp8X706FpEvPzhAyfQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T12:40:51.2528751Z",
+  "Updated": "2026-08-14T12:41:22.8284825Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Invoice Work Bench Maximize",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "mlQ2T6fTi0-PZI_pp3hsBQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/mlQ2T6fTi0-PZI_pp3hsBQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T12:28:06.7323717Z",
+  "Updated": "2026-08-16T12:28:54.3489841Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

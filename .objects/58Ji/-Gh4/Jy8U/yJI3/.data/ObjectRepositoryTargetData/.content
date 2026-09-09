@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="HdnaUh-P20ONK4OzgKuzxg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1767, 194, 115, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Terms Date RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="d44a2dab-8c7c-456f-9895-097636cb29ba" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1767, 170, 115, 24" ElementType="Text" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java cls='FolderPrompt' role='text' check:text='Terms Date' /&gt;" Guid="9f5ec1c9-68a4-4634-9ca5-eb92f42f4a7f" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f75427f3b49366d8d39a4d52169bc7e0.jpg" xmlns="">03Gd9t9cMOE6zK42SZhX-xA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

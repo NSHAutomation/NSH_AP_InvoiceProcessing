@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Table Recipets",
+  "Type": "Element",
+  "TaxonomyType": "Table",
+  "Id": "7Zm4bj38lEafTHL1bnXhLQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/7Zm4bj38lEafTHL1bnXhLQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-24T12:02:21.0578846Z",
+  "Updated": "2026-08-24T12:02:52.9775391Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

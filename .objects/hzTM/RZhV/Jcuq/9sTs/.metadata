@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT passwordField",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Id": "9sTszf5LQEq-mD9puciiww",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/9sTszf5LQEq-mD9puciiww",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jcuq3dengUmqwY-WoFTyqQ",
+  "Created": "2026-08-13T06:58:37.1355179Z",
+  "Updated": "2026-08-13T06:58:37.1355179Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,142 @@
+Full Data Set
+{
+  "Simple Fields": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "invoiceTo": "Nshama Sales",
+    "invoiceFromAddress": "WH No :-3,
+    Ali Mohammed Ahmed Building ,AI Qusais Ind 1 st,PO Box: 234286,
+    Dubai,UAE Tel:04-2717143,
+    Fax No:04-2562706,
+    E-Mail: avss@eim.ae 04 - 2717143,",
+    "invoiceTNRNumber": "100277304000003",
+    "invoiceCurrency": "AED",
+    "invoiceDueDate": null,
+    "invoiceRecivedDate": "14/08/2024",
+    "invoiceBankNumber": "AE840260001014076614001",
+    "invoiceTotalAmount": "577.50",
+    "invoiceVATAmount": "27.50",
+    "invoiceSubAmount": "550.00",
+    "invoiceToAddress": "Town Square Dubai,Jenna-2 Building,
+    Ground Floor.Al Qudra Road. PO Box: 121317,
+    Dubai,
+    UAE",
+    "lopNumber": "7004",
+    "invoiceNumber": "24/12703",
+    "invoiceFrom": "AVS Security Systems LLC",
+    "items": "table"
+    
+  }],
+  "Simple Fields - Formatted": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "invoiceTo": "Nshama Sales",
+    "invoiceFromAddress": "WH No :-3,
+    Ali Mohammed Ahmed Building ,AI Qusais Ind 1 st,PO Box: 234286,
+    Dubai,UAE Tel:04-2717143,
+    Fax No:04-2562706,
+    E-Mail: avss@eim.ae 04 - 2717143,",
+    "invoiceTNRNumber": "100277304000003",
+    "invoiceCurrency": "AED",
+    "invoiceDueDate": null,
+    "invoiceRecivedDate": "14/08/2024",
+    "invoiceBankNumber": "AE840260001014076614001",
+    "invoiceTotalAmount": "577.50",
+    "invoiceVATAmount": "27.50",
+    "invoiceSubAmount": "550.00",
+    "invoiceToAddress": "Town Square Dubai,Jenna-2 Building,
+    Ground Floor.Al Qudra Road. PO Box: 121317,
+    Dubai,
+    UAE",
+    "lopNumber": "7004",
+    "invoiceNumber": "24/12703",
+    "invoiceFrom": "AVS Security Systems LLC",
+    "items": "table"
+    
+  }],
+  "items": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "unitRate": "550.00",
+    "quantity": "1",
+    "description": "Supply of APC UPS for APS machine ( 800VA Floor/wall)"
+    
+  }],
+  "items - Formatted": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "unitRate": "550.00",
+    "quantity": "1",
+    "description": "Supply of APC UPS for APS machine ( 800VA Floor/wall)"
+    
+  }]
+
+}
+
+========================================
+
+extractDataSet.Tables(1) (Formated)
+
+to get the value extractionDataSet.Tables(1)(0)("invoiceTo").tostring
+
+[
+  
+{
+  "Ancestor Index": null,
+  "Parent Index": null,
+  "Index": 1,
+  "invoiceTo": "Nshama Sales",
+  "invoiceFromAddress": "WH No :-3,
+  Ali Mohammed Ahmed Building ,AI Qusais Ind 1 st,PO Box: 234286,
+  Dubai,UAE Tel:04-2717143,
+  Fax No:04-2562706,
+  E-Mail: avss@eim.ae 04 - 2717143,",
+  "invoiceTNRNumber": "100277304000003",
+  "invoiceCurrency": "AED",
+  "invoiceDueDate": null,
+  "invoiceRecivedDate": "14/08/2024",
+  "invoiceBankNumber": "AE840260001014076614001",
+  "invoiceTotalAmount": "577.50",
+  "invoiceVATAmount": "27.50",
+  "invoiceSubAmount": "550.00",
+  "invoiceToAddress": "Town Square Dubai,Jenna-2 Building,
+  Ground Floor.Al Qudra Road. PO Box: 121317,
+  Dubai,
+  UAE",
+  "lopNumber": "7004",
+  "invoiceNumber": "24/12703",
+  "invoiceFrom": "AVS Security Systems LLC",
+  "items": "table"
+  
+}]
+
+==============================================
+extractDataSet.Table(3) (Formated)
+to get the value extractionDataSet.Tables(3)(0)("unitRate").tostring
+
+[
+  
+{
+  "Ancestor Index": null,
+  "Parent Index": null,
+  "Index": 1,
+  "unitRate": "550.00",
+  "quantity": "1",
+  "description": "Supply of APC UPS for APS machine ( 800VA Floor/wall)"
+  
+}]
+
+invoiceExtractedData.Data.InvoiceBankNumber.Confidence
+invoiceExtractedData.Data.InvoiceBankNumber.Confidence>=0.8

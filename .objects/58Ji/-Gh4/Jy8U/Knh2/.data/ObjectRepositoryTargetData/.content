@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sRCLU8xSeUii_g_V3-nIOg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="141, 204, 96, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Match to Receipts (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java name='Qty Invoiced Required' role='text' /&gt;" Guid="2bc8e78c-ffdf-4e6c-8346-2bdc3b43374e" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="141, 180, 96, 24" ElementType="Text" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Match to Receipts (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java cls='FolderPrompt' role='text' check:text='Qty Invoiced' /&gt;" Guid="891aeb63-1ab1-4be7-870f-5bdda5c4d62d" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="35ff78e9a822780f241f3cede8a8a005.jpg" xmlns="">0V673QrHJtUG-IvkHZL1QXg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

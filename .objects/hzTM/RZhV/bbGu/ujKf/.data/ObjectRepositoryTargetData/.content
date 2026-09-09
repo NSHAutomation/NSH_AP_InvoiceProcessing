@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uFd728lcyUuWaqUQ5NXkOA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="83, 453, 173, 25" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl class='textdiv' aaname='View Quick Invoices' /&gt;" Guid="aec0ca90-3415-4991-9c42-5468d34d3cf4" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="5621c05cc111a0314816ab258df47593.jpg" xmlns="">0GCT_gvJawUCTkw8x72vkcg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

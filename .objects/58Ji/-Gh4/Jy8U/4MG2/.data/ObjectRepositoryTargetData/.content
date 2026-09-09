@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mIfhNUl9Fk-yGLTz2QbGkQ" Reference="qUD_TysPEUmxCPTTCdyhAg/4MG21pmY0EKPNyYj1GxpzA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1540, 194, 116, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java name='GL Date RequiredList of Values' role='text' /&gt;" FuzzyAccuracy="0.9" Guid="a494ded6-7ec4-460e-8e14-83c286fd0881" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1540, 170, 116, 24" ElementType="Text" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java cls='FolderPrompt' role='text' idx='16' /&gt;" FuzzyAccuracy="0.9" Guid="8b765213-9e65-4922-bfac-f14c3e594d3b" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1ecfdb59479a6000a94d8ab6384c7220.jpg" xmlns="">01plueYn9HkGNX8Vmdy88Jw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="I5HAsfDEBEOjZ6prNgqhoA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="379, 307, 65, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Run' role='push button' /&gt;" Guid="31d67aae-ccc0-4317-8b36-bc6760f8a309" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtDialog' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f5ff1f03fa54acb76a9fb608088eaa03.jpg" xmlns="">0IReNcxh4cUOkmDJAJUJp1A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

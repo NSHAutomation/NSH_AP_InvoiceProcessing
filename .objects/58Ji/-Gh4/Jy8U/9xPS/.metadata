@@ -1,0 +1,14 @@
+﻿{
+  "Name": "text SupplierList of Va…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "9xPSbbksM0GiU_l4UDkltQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/9xPSbbksM0GiU_l4UDkltQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-23T08:46:36.2525982Z",
+  "Updated": "2026-08-23T08:46:36.2525982Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

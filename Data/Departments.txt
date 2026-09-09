@@ -1,0 +1,4 @@
+NMI - Nshmi
+NP - Nshama
+NE - Nshama Enter
+SEC - Symp Eng 

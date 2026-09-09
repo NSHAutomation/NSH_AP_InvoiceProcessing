@@ -1,0 +1,249 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ActionCenter" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActionCenter_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:upat="clr-namespace:UiPath.Persistence.Activities.Tasks;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.TaskTimer</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.Tasks</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Interop</AssemblyReference>
+      <AssemblyReference>UiPath.Driver.ComInterop</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DriverCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities.Api</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ActionCenter" sap:VirtualizedContainerService.HintSize="1913,2090" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Invoice.pdf" Name="pdfName" />
+      <Variable x:TypeArguments="upaf:FormTaskData" Name="taskObj" />
+      <Variable x:TypeArguments="x:String" Name="taskAction" />
+      <Variable x:TypeArguments="upaf:FormTaskData" Name="waittaskObj" />
+      <Variable x:TypeArguments="x:String" Name="commentStatus" />
+      <Variable x:TypeArguments="x:String" Name="taskStatusMessage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ucas:UploadStorageFile Path="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Upload Storage File" FileName="Invoice.pdf" FileResource="[LocalResource.FromPath(&quot;Data\\Output\\A V S SECURITY.pdf&quot;)]" FolderPath="ApInvoiceAutomation" sap:VirtualizedContainerService.HintSize="452,332" sap2010:WorkflowViewState.IdRef="UploadStorageFile_3" StorageBucketName="pdf_storage">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:UploadStorageFile>
+    <ucas:UploadStorageFile Path="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Upload Storage File" FileName="PO.pdf" FileResource="[LocalResource.FromPath(&quot;Data\\Output\\PO.pdf&quot;)]" FolderPath="ApInvoiceAutomation" sap:VirtualizedContainerService.HintSize="452,332" sap2010:WorkflowViewState.IdRef="UploadStorageFile_4" StorageBucketName="pdf_storage">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:UploadStorageFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <upaf:CreateFormTask AutoCompleteOutcome="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Group="{x:Null}" Labels="{x:Null}" ReassignUser="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" BucketFolderPath="ApInvoiceAutomation" BucketName="pdf_storage" BulkFormLayoutGuid="fc5186b4-88b7-4352-a246-be0a548a56f1" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" EndCriteria="TaskAssigned" FolderPath="ApInvoiceAutomation" FormLayout="%[{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Approve&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Approve&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Reject&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;reject&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false},{&quot;label&quot;:&quot;Comment&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;commentStatus&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Invoice&quot;,&quot;key&quot;:&quot;pdf_storage&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;},{&quot;label&quot;:&quot;PO&quot;,&quot;key&quot;:&quot;pdf_storage2&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;},{&quot;label&quot;:&quot;Note&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;note&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:&quot;This document has been validates&quot;}]" FormLayoutGuid="49a148f5-8d00-445d-b36a-bd228d99aebc" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CreateFormTask_10" Outcome="Notify" StartCriteria="TaskCreated" TaskCatalog="ApInvoices" TaskOutput="[taskObj]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.Critical]" TaskTimerEnabled="False" TaskTitle="Inoice Validation" UserNameOrEmail="Automation@nshama.ae">
+            <upaf:CreateFormTask.AssignmentCriteria>
+              <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+            </upaf:CreateFormTask.AssignmentCriteria>
+            <upaf:CreateFormTask.FormData>
+              <InArgument x:TypeArguments="x:String" x:Key="pdf_storage">Invoice.pdf</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="pdf_storage2">Invoice2.pdf</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="commentStatus">[commentStatus]</OutArgument>
+            </upaf:CreateFormTask.FormData>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </upaf:CreateFormTask>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <upaf:CreateFormTask AutoCompleteOutcome="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Group="{x:Null}" Labels="{x:Null}" ReassignUser="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" BucketFolderPath="ApInvoiceAutomation" BucketName="pdf_storage" BulkFormLayoutGuid="fc5186b4-88b7-4352-a246-be0a548a56f1" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" EndCriteria="TaskAssigned" FolderPath="ApInvoiceAutomation" FormLayout="%[{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Approve&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Approve&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Reject&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;reject&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Previous History&quot;,&quot;cellAlignment&quot;:&quot;center&quot;,&quot;key&quot;:&quot;previousHistory&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:1,&quot;numCols&quot;:4,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Invoice Number&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;invoiceNumber&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;LOP Number&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;lopNumber&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;quantity&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;quantity&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Amount&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;amount&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]}]]}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false},{&quot;label&quot;:&quot;Comment&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;commentStatus&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Invoice&quot;,&quot;key&quot;:&quot;pdf_storage&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;},{&quot;label&quot;:&quot;PO&quot;,&quot;key&quot;:&quot;pdf_storage2&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;},{&quot;label&quot;:&quot;Note&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;note&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:&quot;This document has been validates&quot;}]" FormLayoutGuid="28f6520a-8d4b-4e3a-9b83-8b463735b8e6" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CreateFormTask_7" Outcome="Notify" StartCriteria="TaskCreated" TaskCatalog="ApInvoices" TaskOutput="[taskObj]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.Critical]" TaskTimerEnabled="False" TaskTitle="Inoice Validation" UserNameOrEmail="hitesh@nshama.ae">
+            <upaf:CreateFormTask.AssignmentCriteria>
+              <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+            </upaf:CreateFormTask.AssignmentCriteria>
+            <upaf:CreateFormTask.FormData>
+              <InArgument x:TypeArguments="x:String" x:Key="pdf_storage">Invoice.pdf</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="pdf_storage2">Invoice2.pdf</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="commentStatus">[commentStatus]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="invoiceNumber">12345</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="lopNumber">7004</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="quantity">1</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="amount">550</InArgument>
+            </upaf:CreateFormTask.FormData>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </upaf:CreateFormTask>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <upaf:CreateFormTask AutoCompleteOutcome="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Group="{x:Null}" Labels="{x:Null}" ReassignUser="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" BucketFolderPath="ApInvoiceAutomation" BucketName="pdf_storage" BulkFormLayoutGuid="7025ea5d-15f7-437d-a32a-fedd47c6d037" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" EndCriteria="TaskAssigned" FolderPath="ApInvoiceAutomation" FormLayout="%[{&quot;title&quot;:&quot;Previous History&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;previousHistory&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Table&quot;,&quot;cellAlignment&quot;:&quot;left&quot;,&quot;key&quot;:&quot;table&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:1,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Invoice Number&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;invoiceNumber&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;LPO Number&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;lpoNumber&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Total Quantity&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;totalQuantity&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Total Amount&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;totalAmount&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]}]],&quot;numCols&quot;:4}]},{&quot;title&quot;:&quot;Invoice View&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;invoiceView&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;PDF&quot;,&quot;key&quot;:&quot;pdf_storageInvoice&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;}]},{&quot;title&quot;:&quot;Purchase Order&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;purchaseOrder&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;PDF&quot;,&quot;key&quot;:&quot;pdf_storagePO&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{}],&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;type&quot;:&quot;pdf&quot;}]},{&quot;label&quot;:&quot;Comment&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;comment&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Approve&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;Approve&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Reject&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;Reject&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false},{&quot;label&quot;:&quot;commentStatus&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;commentStatus&quot;,&quot;input&quot;:true}]" FormLayoutGuid="40016936-de3a-48c5-85b3-2b8732dc6e44" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="452,390" sap2010:WorkflowViewState.IdRef="CreateFormTask_9" Outcome="Notify" StartCriteria="TaskCreated" TaskCatalog="ApInvoices" TaskOutput="[taskObj]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.Critical]" TaskTimerEnabled="False" TaskTitle="Invoice Validation" UserNameOrEmail="Automation@nshama.ae">
+      <upaf:CreateFormTask.AssignmentCriteria>
+        <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+      </upaf:CreateFormTask.AssignmentCriteria>
+      <upaf:CreateFormTask.FormData>
+        <InArgument x:TypeArguments="x:String" x:Key="pdf_storageInvoice">Invoice.pdf</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="pdf_storagePO">PO.pdf</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="commentStatus">[commentStatus]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="invoiceNumber">12345</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="lpoNumber">7004</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="totalQuantity">10</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="totalAmount">1000</InArgument>
+      </upaf:CreateFormTask.FormData>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </upaf:CreateFormTask>
+    <upaf:WaitForFormTaskAndResume TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for Form Task and Resume" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="WaitForFormTaskAndResume_1" StatusMessage="[taskStatusMessage]" TaskAction="[taskAction]" TaskInput="[taskObj]" TaskOutput="[waittaskObj]" />
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[taskAction]" sap:VirtualizedContainerService.HintSize="452,724" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <Switch.Default>
+        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </Switch.Default>
+      <Sequence x:Key="Approve" DisplayName="Case" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Object" Name="out_comment" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[taskAction + commentStatus]" />
+      </Sequence>
+      <Sequence x:Key="reject" DisplayName="Case" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[taskAction + commentStatus]" />
+      </Sequence>
+    </Switch>
+  </Sequence>
+</Activity>

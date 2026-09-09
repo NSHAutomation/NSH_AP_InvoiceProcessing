@@ -1,0 +1,17 @@
+﻿{
+  "Name": "'Close Batch Invoice",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "3l6ECJjduUeZBNzdw7-YVw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/3l6ECJjduUeZBNzdw7-YVw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-18T13:36:15.8443357Z",
+  "Updated": "2026-08-18T13:36:44.488642Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

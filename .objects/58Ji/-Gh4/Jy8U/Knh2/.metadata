@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Qty Invoiced",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Knh2qwzOxkqRaIPjXWop0Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/Knh2qwzOxkqRaIPjXWop0Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T19:01:20.5511428Z",
+  "Updated": "2026-08-16T19:01:20.5511428Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

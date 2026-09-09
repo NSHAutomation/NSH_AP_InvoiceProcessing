@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="B63cQO3mdUuJ-oVz8w__ww" Reference="qUD_TysPEUmxCPTTCdyhAg/w4oU6njF2UaFo1n4-QBwDg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="eb89dfff-a47c-4633-b400-f5e18ac67a07" CvElementArea="38, 311, 15, 15" CvTextArea="53, 311, 237, 14" CvTextArgument="I accept the risk and want to run this application." CvType="CheckBox" DesignTimeRectangle="35, 299, 261, 39" ElementType="CheckBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='I accept the risk and want to run this application.' role='check box' /&gt;" Guid="2e726b0d-7d76-4982-bb9b-870c1fe5192f" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtDialog' title='Security Warning' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="08111bb778f3949516d2f858ae091a2f.jpg" xmlns="">0btfiNIECTUe4JDm0ZuuuPw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Check</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

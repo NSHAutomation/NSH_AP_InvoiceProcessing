@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT usernameField",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "EPkLY4ixBEuhJHP3Ojt29w",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/EPkLY4ixBEuhJHP3Ojt29w",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jcuq3dengUmqwY-WoFTyqQ",
+  "Created": "2026-08-13T06:54:35.3926533Z",
+  "Updated": "2026-08-13T06:54:35.3926533Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

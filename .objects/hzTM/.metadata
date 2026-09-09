@@ -1,0 +1,15 @@
+﻿{
+  "Name": "oracleWebLogin - Google Chrome",
+  "Type": "App",
+  "Id": "hzTMTxXsh06yGMnYeUZ2_g",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/hzTMTxXsh06yGMnYeUZ2_g",
+  "Created": "2026-08-13T06:50:05.5445717Z",
+  "Updated": "2026-08-13T06:50:20.4076438Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

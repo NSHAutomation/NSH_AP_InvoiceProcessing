@@ -1,0 +1,17 @@
+﻿{
+  "Name": "push button PurchaseOrder",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "yMfZ4TAvXEylVfiduWNHyQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/yMfZ4TAvXEylVfiduWNHyQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T06:35:06.5253893Z",
+  "Updated": "2026-08-14T06:37:55.1234846Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

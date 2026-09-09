@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Switch Responsibility...",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "fn_CbP58aEmatArDBlK4jg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/fn_CbP58aEmatArDBlK4jg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-13T12:42:54.3311924Z",
+  "Updated": "2026-08-13T12:42:54.3311924Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

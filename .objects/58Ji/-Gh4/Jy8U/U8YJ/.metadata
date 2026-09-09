@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Close Save Attachment Window",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "U8YJ-uFsO0-n46pRstMq0w",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/U8YJ-uFsO0-n46pRstMq0w",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-18T13:28:57.852542Z",
+  "Updated": "2026-08-18T13:29:32.0950323Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

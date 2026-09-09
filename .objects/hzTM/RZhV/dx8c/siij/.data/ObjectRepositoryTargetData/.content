@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DMINadIRzEGq_FBMqnMJFQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/RF.jsp" DesignTimeRectangle="129, 255, 55, 19" ElementType="Button" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Submit' type='submit' /&gt;" Guid="9b47dd73-d6dc-4255-bd0f-36f9de0e253f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GFM Upload Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="7040a821356378e93aed55ee98d13c38.jpg" xmlns="">0kTgebWtQfUuw8a9BAHHwVQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

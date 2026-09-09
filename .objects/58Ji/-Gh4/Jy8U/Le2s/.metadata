@@ -1,0 +1,14 @@
+﻿{
+  "Name": "OK alt O",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Le2sX60p-E-hNpW7QaDkEQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/Le2sX60p-E-hNpW7QaDkEQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T19:26:01.2056889Z",
+  "Updated": "2026-08-16T19:26:01.2056889Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

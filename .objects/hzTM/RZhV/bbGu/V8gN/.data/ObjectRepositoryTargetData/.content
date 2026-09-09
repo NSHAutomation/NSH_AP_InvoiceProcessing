@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MY7_SZaz-EuTnvFs6q6Jlg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="" DesignTimeRectangle="136, 399, 495, 17" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;wnd aaname='File name:' cls='Edit' /&gt;" Guid="daa5f4d4-4b0e-4ce6-bdc3-e6abc618b589" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='*' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="b9fd6286359d36d13735be83377787e9.jpg" xmlns="">06s3Arjwp2EK0plRaiszvaQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

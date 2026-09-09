@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IrquQw-rzka2u73QjpMD8w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/AppsLocalLogin.jsp" DesignTimeRectangle="856, 427, 116, 14" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl tag='A' aaname='*Log Out' /&gt;" Guid="beb9db64-f68a-4dfe-b872-ffbe215fb3ed" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="3fe3753a418846f6441eeffb85fee747.jpg" xmlns="">03_RIHAX8b06VcRrUgzIlWg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

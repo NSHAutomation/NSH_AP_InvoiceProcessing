@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="l4hYdNdhkEy_lzwMTeW2Rg" Reference="qUD_TysPEUmxCPTTCdyhAg/Bx4SjVgaOE2BS2JgKzw6pQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="818, 481, 330, 126" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Error APP-PO-*: No records meet your search criteria&amp;#xA;&amp;#xA;Cause:        There are no records that match your search criteria.  &amp;#xA;&amp;#xA;Action:        Re-enter your search criteria with fewer or different parameters.&amp;#xA;' role='internal frame' /&gt;&lt;java name='APP-PO-*: No records meet your search criteria&amp;#xA;&amp;#xA;Cause:        There are no records that match your search&amp;#xA;criteria.  &amp;#xA;&amp;#xA;Action:        Re-enter your search criteria with fewer or&amp;#xA;different parameters.&amp;#xA;' role='label' /&gt;" Guid="0b1938f2-d745-4c59-bd26-4604fc5c4012" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="3999d6824954ea1599c4a9a74ad75889.jpg" xmlns="">09kil80-GyUqhJ3qhxbiCJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

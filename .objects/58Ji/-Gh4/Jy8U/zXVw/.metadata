@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Open Folder...",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "zXVw4OzZEUy47vVBPiwsmw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/zXVw4OzZEUy47vVBPiwsmw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T05:53:16.7029485Z",
+  "Updated": "2026-08-17T05:53:16.7029485Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

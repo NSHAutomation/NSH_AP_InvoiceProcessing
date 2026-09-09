@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Click 'Receipts Headder Close'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "CIwvh_3TrE22G8IR3BT38w",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/CIwvh_3TrE22G8IR3BT38w",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-24T09:35:48.9238751Z",
+  "Updated": "2026-08-24T09:40:08.1205813Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

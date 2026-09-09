@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3jHA519UFkKmDJTccsQt4Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="82, 154, 163, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Attachments *' role='internal frame' /&gt;&lt;java name='Category RequiredList of Values' role='text' /&gt;" Guid="5b529251-771e-49fe-87ac-7e007a889434" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="3fa95cf13c71461202b36cbf1f9e8be8.jpg" xmlns="">0V-s7bhf3Ck-lenbJNXt2fA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

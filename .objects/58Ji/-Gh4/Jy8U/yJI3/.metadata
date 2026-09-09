@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Terms Date",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "yJI3tk8gmk63oM132tJAuA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/yJI3tk8gmk63oM132tJAuA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T17:42:01.0722324Z",
+  "Updated": "2026-08-16T17:42:01.0722324Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

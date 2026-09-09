@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome GFM Upload Page",
+  "Type": "Screen",
+  "Id": "dx8cyQVFJUGI3cNFathY5Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/dx8cyQVFJUGI3cNFathY5Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/RZhVY6FYGEGRXLrVwZj4Lg",
+  "Created": "2026-08-17T10:46:29.5083633Z",
+  "Updated": "2026-08-17T10:46:29.5083633Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

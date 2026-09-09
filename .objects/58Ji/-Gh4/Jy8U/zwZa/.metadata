@@ -1,0 +1,14 @@
+﻿{
+  "Name": "text Requisition Number…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "zwZadRlACUGVB-QsdTUnQA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/zwZadRlACUGVB-QsdTUnQA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T06:42:22.937579Z",
+  "Updated": "2026-08-14T06:42:22.937579Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Not SAHNI Log Out",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "AD8-Murt1EmFgR4surQMGw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/AD8-Murt1EmFgR4surQMGw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jcuq3dengUmqwY-WoFTyqQ",
+  "Created": "2026-08-20T05:10:37.0482429Z",
+  "Updated": "2026-08-20T05:10:37.0482429Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

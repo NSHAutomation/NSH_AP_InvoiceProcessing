@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uoHOtsXTCUKv2VT8K4WcHg" Reference="qUD_TysPEUmxCPTTCdyhAg/EPkLY4ixBEuhJHP3Ojt29w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/AppsLocalLogin.jsp" DesignTimeRectangle="856, 386, 227, 28" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='User Name' /&gt;" Guid="bc5f8756-aebf-43ef-8b59-cafc06394b88" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="6af364f6b48532772144cd04d6a8839c.jpg" xmlns="">0aUW9uk0makKw9fJ0qUb7pw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

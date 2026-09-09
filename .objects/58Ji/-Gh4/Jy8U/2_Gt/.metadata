@@ -1,0 +1,14 @@
+﻿{
+  "Name": "text Invoice Approved b…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "2_GtbhLZdEiPNbwGuoh97Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/2_GtbhLZdEiPNbwGuoh97Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T18:22:15.6087872Z",
+  "Updated": "2026-08-16T18:22:15.6087872Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

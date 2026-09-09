@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Close Invoice Workbenck",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "ZUhIX7uNHE-WxynyIamiNw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/ZUhIX7uNHE-WxynyIamiNw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T18:42:18.6519493Z",
+  "Updated": "2026-08-16T18:44:07.5551478Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

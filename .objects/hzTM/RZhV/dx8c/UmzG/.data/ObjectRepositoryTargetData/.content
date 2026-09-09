@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ix5tUiBjR0i4HjweSeRD8w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/RF.jsp" DesignTimeRectangle="121, 228, 236, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl id='Upload__xc_' tag='TABLE' /&gt;&lt;webctrl id='Upload_oafileUpload' tableRow='1' tag='INPUT' /&gt;" Guid="cb005cce-a351-4c17-91f4-6d4285231bc8" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GFM Upload Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="9db3e764b328e6ee743b7cbb43525e92.jpg" xmlns="">0-ImaJBbiZ0iPKer4g2aVjg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

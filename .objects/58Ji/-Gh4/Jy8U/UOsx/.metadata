@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Close Reciept",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "UOsxVlA72E-EXhOLlMee4Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/UOsxVlA72E-EXhOLlMee4Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-24T12:19:50.2666202Z",
+  "Updated": "2026-08-24T12:20:16.2827367Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

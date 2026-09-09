@@ -1,0 +1,13 @@
+﻿{
+  "Name": "View Action History mne…",
+  "Type": "Element",
+  "Id": "BrJxfMGa6024dKsTF2aZlQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/BrJxfMGa6024dKsTF2aZlQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T06:46:09.6544175Z",
+  "Updated": "2026-08-14T06:46:09.6544175Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

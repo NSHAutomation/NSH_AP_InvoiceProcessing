@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ECcSJaD3QkW2Lb_G4BcrkQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/RF.jsp" DesignTimeRectangle="197, 435, 242, 24" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='File name:' cls='ComboBoxEx32' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="0f6a1eab-a8d6-4f42-a8f5-9346d22f6731" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='*' title='Open' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="757926927f428e21594eeabd0c23f5bf.jpg" xmlns="">09RKOCZ8I0Ey225WNVwA5gw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

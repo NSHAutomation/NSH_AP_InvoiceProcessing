@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Nsh/Nshama Account FieldFlex",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "bIhjikXnwU67CokbdQsdMA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/bIhjikXnwU67CokbdQsdMA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T06:10:20.4794996Z",
+  "Updated": "2026-08-17T06:11:37.1454943Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

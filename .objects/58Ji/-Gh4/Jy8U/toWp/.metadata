@@ -1,0 +1,14 @@
+﻿{
+  "Name": "text Category RequiredL…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "toWpB1IBfE-bO7MDtZV4hw",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/toWpB1IBfE-bO7MDtZV4hw",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T10:38:36.1303557Z",
+  "Updated": "2026-08-17T10:38:36.1303557Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

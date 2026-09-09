@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Inquire",
+  "Type": "Element",
+  "Id": "_WqQbLIUB0S9K3JCPkMLjA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/_WqQbLIUB0S9K3JCPkMLjA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-13T13:32:55.1230171Z",
+  "Updated": "2026-08-13T13:32:55.1230171Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

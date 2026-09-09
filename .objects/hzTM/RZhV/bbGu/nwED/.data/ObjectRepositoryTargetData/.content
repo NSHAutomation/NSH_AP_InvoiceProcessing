@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6AHxbRWjyUGZFO8nUaTW5Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="61, 401, 192, 25" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl aaname='AP Payment - NMI' class='textdivresp' /&gt;" Guid="3f1bd915-2a65-4a31-98ea-4cb56ece558d" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="78e494e75dc15d14df75f5b30e633c60.jpg" xmlns="">0DGT_OG7wGU222tUhw5TCjg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

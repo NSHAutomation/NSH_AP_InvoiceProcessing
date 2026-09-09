@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3st6_L556kO-TPXoWBvzAQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="108, 171, 104, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Folder ALT l' role='menu' /&gt;&lt;java name='Show Field... mnemonic F' role='menu item' /&gt;" Guid="bc5949a0-9055-465d-a367-8e4b6e9eb541" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="125acd1eccc5806ff2aebe3373977323.jpg" xmlns="">09b6ftzY2pE-Lw8kXL9g-Tw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,123 @@
+{
+  "Simple Fields": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "invoiceTo": "Nshama Properties Owned by Nshmi Development One Person Company L.L.C",
+    "invoiceFromAddress": "Unit 04,
+    Toufiq-A2,
+    Ras Al Khor,
+    Industrial Area -3 Dubai DU 430726 United Arab Emirates TRN 100392563100003",
+    "invoiceTNRNumber": "100205634700003",
+    "invoiceCurrency": "AED",
+    "invoiceDueDate": null,
+    "invoiceRecivedDate": "14/08/2026",
+    "invoiceBankNumber": "AE810400000882521863001",
+    "invoiceTotalAmount": "3,958.50",
+    "invoiceVATAmount": "188.50",
+    "invoiceSubAmount": "3,770.00",
+    "invoiceToAddress": "Nshama Sales Centre. Town Square Dubai Jenna-2 Building,
+    Ground Floor,
+    AI Qudra Road Dubai121317 United Arab Emirates DU United Arab Emirates",
+    "lopNumber": "PO:2521",
+    "invoiceNumber": "INV-350249",
+    "invoiceFrom": "ALTAMYZ ADVERTISING LLC",
+    "items": "table"
+    
+  }],
+  "Simple Fields - Formatted": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "invoiceTo": "Nshama Properties Owned by Nshmi Development One Person Company L.L.C",
+    "invoiceFromAddress": "Unit 04,
+    Toufiq-A2,
+    Ras Al Khor,
+    Industrial Area -3 Dubai DU 430726 United Arab Emirates TRN 100392563100003",
+    "invoiceTNRNumber": "100205634700003",
+    "invoiceCurrency": "AED",
+    "invoiceDueDate": null,
+    "invoiceRecivedDate": "14/08/2026",
+    "invoiceBankNumber": "AE810400000882521863001",
+    "invoiceTotalAmount": "3,958.50",
+    "invoiceVATAmount": "188.50",
+    "invoiceSubAmount": "3,770.00",
+    "invoiceToAddress": "Nshama Sales Centre. Town Square Dubai Jenna-2 Building,
+    Ground Floor,
+    AI Qudra Road Dubai121317 United Arab Emirates DU United Arab Emirates",
+    "lopNumber": "PO:2521",
+    "invoiceNumber": "INV-350249",
+    "invoiceFrom": "ALTAMYZ ADVERTISING LLC",
+    "items": "table"
+    
+  }],
+  "items": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "unitRate": null,
+    "quantity": "1.00",
+    "description": "The Mayfair,
+    Proposal for the Supply and Installation of Frosted Stickers at Mayfair (Qtn- SO2169) Frosted Sticker - A&B Floor 1 - 6 Supply of frosted sticker with stencil cutting pasting on existing glass"
+    
+  },
+  
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 2,
+    "unitRate": null,
+    "quantity": null,
+    "description": "Total : 28 Glass"
+    
+  },
+  
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 3,
+    "unitRate": null,
+    "quantity": "1.00",
+    "description": null
+    
+  }],
+  "items - Formatted": [
+    
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 1,
+    "unitRate": null,
+    "quantity": "1.00",
+    "description": "The Mayfair,
+    Proposal for the Supply and Installation of Frosted Stickers at Mayfair (Qtn- SO2169) Frosted Sticker - A&B Floor 1 - 6 Supply of frosted sticker with stencil cutting pasting on existing glass"
+    
+  },
+  
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 2,
+    "unitRate": null,
+    "quantity": null,
+    "description": "Total : 28 Glass"
+    
+  },
+  
+  {
+    "Ancestor Index": null,
+    "Parent Index": null,
+    "Index": 3,
+    "unitRate": null,
+    "quantity": "1.00",
+    "description": null
+    
+  }]
+
+}

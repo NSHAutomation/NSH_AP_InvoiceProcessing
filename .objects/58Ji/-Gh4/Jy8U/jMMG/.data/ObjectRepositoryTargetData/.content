@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mD0sCcOck0qh6NZ8PZQX4g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="703, 406, 660, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Purchase Order Headers' role='internal frame' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;java name='PO Headers' role='internal frame' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;java role='text' /&gt;" Guid="3e5b2605-a472-42a2-9264-77e8e4203a4d" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="587, 406, 111, 26" ElementType="Text" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Purchase Order Headers' role='internal frame' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;java name='PO Headers' role='internal frame' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;java name='Ref. No.' role='label' matching:name='fuzzy' fuzzylevel:name='0.0' check:text='Ref. No.' /&gt;" Guid="0925c09c-d221-4785-8d11-a1f8781b4057" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="70f6e56a3eb7685e943296da4db879c8.jpg" xmlns="">0IInLjrBBTU6ZN69SJ9S4Eg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

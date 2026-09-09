@@ -1,0 +1,13 @@
+﻿{
+  "Name": "View Quick Invoices",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ujKfnI0TK0-qjs21tJic2w",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/ujKfnI0TK0-qjs21tJic2w",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg",
+  "Created": "2026-08-13T07:43:42.2310369Z",
+  "Updated": "2026-08-13T07:43:42.2310369Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

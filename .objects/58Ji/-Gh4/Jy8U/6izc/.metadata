@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Liability Account",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "6izcTvaJuU6_2mB8asuf2w",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/6izcTvaJuU6_2mB8asuf2w",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T06:07:16.3920317Z",
+  "Updated": "2026-08-17T06:07:16.3920317Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

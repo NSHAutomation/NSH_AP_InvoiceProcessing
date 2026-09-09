@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Amount Item",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "fwbFTDEj50CuiGoR9UMYfg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/fwbFTDEj50CuiGoR9UMYfg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-17T06:47:50.0208609Z",
+  "Updated": "2026-08-17T06:56:56.6551246Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

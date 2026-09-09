@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rCaMBiuTjE2lpf-8Yga_9g" Reference="qUD_TysPEUmxCPTTCdyhAg/wT4stxrdaEu2H64l0HlrNw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="387, 350, 63, 25" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;webctrl tableRow='1' tag='H2' aaname='Worklist' /&gt;" Guid="6e68869b-f168-4455-a84f-bb987ba15f3b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="05057f6402358d74a207e500f756a4ad.jpg" xmlns="">0KFRrq5-mC0mKX_mpqJigsw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Open",
+  "Type": "Element",
+  "Id": "2csMf_MlqkW5IWVe-2Rlsg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/2csMf_MlqkW5IWVe-2Rlsg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/dx8cyQVFJUGI3cNFathY5Q",
+  "Created": "2026-08-17T10:48:51.6343679Z",
+  "Updated": "2026-08-17T10:48:51.6343679Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

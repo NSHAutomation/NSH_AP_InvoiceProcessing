@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Run",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Bs-AqrRPJ0OVNgfmZR3prQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/Bs-AqrRPJ0OVNgfmZR3prQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/MNkJgbX9bkCXODQ6DSGT_Q",
+  "Created": "2026-08-13T08:22:28.616486Z",
+  "Updated": "2026-08-13T08:22:28.616486Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

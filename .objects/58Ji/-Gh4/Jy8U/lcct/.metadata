@@ -1,0 +1,14 @@
+﻿{
+  "Name": "text NumberList of Valu…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "lcctQMvsQ0G66slsgNa9xA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/lcctQMvsQ0G66slsgNa9xA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-13T12:56:17.3174564Z",
+  "Updated": "2026-08-13T12:56:17.3174564Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

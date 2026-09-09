@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vTeXjkmLj0KOzkfLFxrlMA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/RF.jsp" DesignTimeRectangle="0, 0, 664, 510" ElementVisibilityArgument="Interactive" Guid="19aaeb9e-0acd-40cc-96a3-2a586a0c1b56" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='*' title='Open' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2423a29acedef6e1e559404efee8aee7.jpg" xmlns="">043nRBasbrECswY4koRRLmA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

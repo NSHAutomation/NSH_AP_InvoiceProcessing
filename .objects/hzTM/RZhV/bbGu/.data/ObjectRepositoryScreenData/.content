@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="MGLVFEqvBE2PZ3gGK-_fXA" Reference="qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="PmNibUldM0mn6b3i6mr6iQ" Reference="qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg" Selector="&lt;html app='chrome.exe' title='*' /&gt;" Url="erp.nshama.ae/OA_HTML/OA.jsp">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

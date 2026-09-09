@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tQYWo4DzI0mZJfPX5x7g-Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="325, 63, 26, 22" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java cls='ToolBar' idx='52' role='tool bar' /&gt;&lt;java name='Clear Record' role='push button' /&gt;" Guid="3b4b2386-34eb-4db0-a7c9-ca231756d4d4" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fe8b8ce79d55fa3e4fa8548133aaca37.jpg" xmlns="">07jBb_Y7qD0am6DDzw1xMvA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

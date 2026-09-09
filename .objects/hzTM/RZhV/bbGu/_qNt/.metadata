@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Keep frmservlet (1).jnlp",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "_qNtJjMkEUmlIC1qhPsMQQ",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/_qNtJjMkEUmlIC1qhPsMQQ",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg",
+  "Created": "2026-08-13T08:00:47.8978725Z",
+  "Updated": "2026-08-13T08:00:47.8978725Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9Asuob2p-kS1Yaic15d7hA" Reference="qUD_TysPEUmxCPTTCdyhAg/zw2Fm7-e10O73O2OjJl9yg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="850, 526, 266, 36" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Error *: Could not reserve record.' role='internal frame' /&gt;&lt;java name='* Could not reserve record.' role='label' /&gt;" Guid="02b6af7c-c237-4427-92ee-8e59b6250537" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="5577f0f374ff096435cb547353d27b03.jpg" xmlns="">0GGFQRJ3Mjkie9Bfer1HeIA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

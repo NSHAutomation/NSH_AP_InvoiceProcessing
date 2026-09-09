@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Extract Table Data 'PO Matched Table'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "9jWVRCOLikShTiHKOZaNLg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/9jWVRCOLikShTiHKOZaNLg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-23T09:06:34.5276044Z",
+  "Updated": "2026-08-23T09:10:57.0330295Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

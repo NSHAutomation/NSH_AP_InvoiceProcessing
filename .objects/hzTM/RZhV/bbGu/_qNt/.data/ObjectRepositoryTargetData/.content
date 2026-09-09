@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2txZwQLD6EuxL3gHQqLHJA" Reference="qUD_TysPEUmxCPTTCdyhAg/_qNtJjMkEUmlIC1qhPsMQQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="211, 21, 64, 24" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Recent download history' role='dialog' /&gt;&lt;ctrl name='Keep*' role='push button' /&gt;" Guid="4d3a50c5-31ed-411d-b8fa-bfa77c2bd956" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Recent download history' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cd7ceec167dc4b1ceb85bf76db36491b.jpg" xmlns="">0MNqPXdBzbEqPVU8vDFuuZA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Tax Details alt x",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "8dMk9vw3TUek1FEaXqtB0Q",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/8dMk9vw3TUek1FEaXqtB0Q",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-16T19:15:34.6014792Z",
+  "Updated": "2026-08-16T19:15:34.6014792Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

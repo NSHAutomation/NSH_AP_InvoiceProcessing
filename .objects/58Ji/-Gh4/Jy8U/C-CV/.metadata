@@ -1,0 +1,13 @@
+﻿{
+  "Name": "180",
+  "Type": "Element",
+  "Id": "C-CVQyD2s0OW2AiRibfqPg",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/C-CVQyD2s0OW2AiRibfqPg",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-24T06:41:26.2435606Z",
+  "Updated": "2026-08-24T06:41:26.2435606Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SOAsNVGovEWUWy2PlE1wAg" Reference="qUD_TysPEUmxCPTTCdyhAg/kdAZGawWWk-wWnshZ99MYA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="erp.nshama.ae/OA_HTML/OA.jsp" DesignTimeRectangle="115, 37, 274, 22" ElementType="Toolbar" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;wnd ctrlid='*' title='Address:*' /&gt;" Guid="671b4fe2-7f84-4a11-b15c-89396c7f7c61" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='*' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="fbc09d64f5c5c79fe63f52a50dca4d7a.jpg" xmlns="">0YeEvHbelvU2jqB_2l-ZgXA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

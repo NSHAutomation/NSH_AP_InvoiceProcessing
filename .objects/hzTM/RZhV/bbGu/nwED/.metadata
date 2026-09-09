@@ -1,0 +1,13 @@
+﻿{
+  "Name": "AP Payment - NMI",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "nwED--Uy_kSPSSi91hrTPA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/nwED--Uy_kSPSSi91hrTPA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/bbGuPAHPZEyd7Svtry6CRg",
+  "Created": "2026-08-13T07:43:40.0984437Z",
+  "Updated": "2026-08-13T07:43:40.0984437Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

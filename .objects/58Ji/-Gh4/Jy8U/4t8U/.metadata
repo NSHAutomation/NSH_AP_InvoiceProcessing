@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Table Approvals",
+  "Type": "Element",
+  "TaxonomyType": "Table",
+  "Id": "4t8UnAhJBEKcdu_8llxsQA",
+  "Reference": "qUD_TysPEUmxCPTTCdyhAg/4t8UnAhJBEKcdu_8llxsQA",
+  "ParentRef": "qUD_TysPEUmxCPTTCdyhAg/Jy8U3zFzl0GAq8ZByxJ0dA",
+  "Created": "2026-08-14T07:02:37.1210095Z",
+  "Updated": "2026-08-14T07:02:55.8114451Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

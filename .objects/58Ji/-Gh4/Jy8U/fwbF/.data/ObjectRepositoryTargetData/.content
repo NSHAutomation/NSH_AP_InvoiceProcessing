@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bTRgF0AgDku5NxPjSO5Ypg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="146, 434, 96, 24" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Invoice Workbench *' role='internal frame' /&gt;&lt;java name='Amount Required' role='text' /&gt;" Guid="4a8784e6-be61-4f1e-be69-d04008e3eb65" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="5c8a38f173bac171bad334e8dca0832d.jpg" xmlns="">0Y54pddLUq0qQkPWqjX-E9w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
