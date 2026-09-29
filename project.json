@@ -12,7 +12,8 @@
     "UiPath.Persistence.Activities": "[1.10.1]",
     "UiPath.System.Activities": "[26.6.2]",
     "UiPath.Testing.Activities": "[25.10.2]",
-    "UiPath.UIAutomation.Activities": "[26.10.1]"
+    "UiPath.UIAutomation.Activities": "[26.10.1]",
+    "UiPath.WebAPI.Activities": "[2.5.2]"
   },
   "webServices": [],
   "entitiesStores": [],

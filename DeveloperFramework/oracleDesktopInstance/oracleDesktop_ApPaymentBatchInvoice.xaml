@@ -1,5 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="oracleDesktop_ApPaymentBatchInvoice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="oracleDesktop_ApPaymentBatchInvoice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_InvoiceSummary" Type="InArgument(x:String)" />
+    <x:Property Name="in_isInvoiceLineItemsMorethan1" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_dt_InvoiceExtractedTableLineItems" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="out_VoucherNumber" Type="OutArgument(x:String)" />
     <x:Property Name="in_InvoiceVatAmount" Type="InArgument(x:String)" />
@@ -68,6 +71,7 @@
       <x:String>UiPath.Shared.Activities.Utils</x:String>
       <x:String>UiPath.Mail.Outlook.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -143,36 +147,39 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="oracleDesktop_ApPaymentBatchInvoice" sap:VirtualizedContainerService.HintSize="1494,17828" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="oracleDesktop_ApPaymentBatchInvoice" sap:VirtualizedContainerService.HintSize="1913,12985" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Automates AP invoice processing in Oracle Applications" sap:VirtualizedContainerService.HintSize="630,17805" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Automates AP invoice processing in Oracle Applications" sap:VirtualizedContainerService.HintSize="630,12962" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="596,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Entering Invoice Details&quot;]" />
-      <TryCatch DisplayName="Automates AP invoice processing in Oracle Applications" sap:VirtualizedContainerService.HintSize="596,17547" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Automates AP invoice processing in Oracle Applications" sap:VirtualizedContainerService.HintSize="596,12704" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
-          <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="594,16976" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="594,12133" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Oracle Applications - NMDBP" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,16916" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Oracle Applications - NMDBP" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,12073" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,16669" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,11826" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="bankNumber" />
                     </Sequence.Variables>
@@ -186,6 +193,83 @@
                         <uix:TargetAnchorable ContentHash="pFGQGF04oU-LXMtWCpa7hw" DesignTimeRectangle="997, 119, 16, 16" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI)*' role='internal frame' /&gt;&lt;java cls='ToolBar' role='tool bar' /&gt;&lt;java idx='2' role='push button' /&gt;" Guid="5a4f4d76-c5ca-4234-b8cf-ec0a0e37775a" InformativeScreenshot="1e5a45acf9599bbadd92bbcafa535d69.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/mlQ2T6fTi0-PZI_pp3hsBQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Folder ALT l'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="VDdLaXr330uvaL2jYspsVA" DesignTimeRectangle="105, 31, 45, 30" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Folder*' role='menu' /&gt;" Guid="a5bdd421-817b-4ebb-8d23-e4b644dda3aa" InformativeScreenshot="962e50205f2b95fe4387cb2263876731.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/6Z7zD2oQ7Ui3oAG1H5jUXw" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show Field... mnemonic F'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="3st6_L556kO-TPXoWBvzAQ" DesignTimeRectangle="108, 171, 104, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Folder ALT l' role='menu' /&gt;&lt;java name='Show Field... mnemonic F' role='menu item' /&gt;" Guid="bc5949a0-9055-465d-a367-8e4b6e9eb541" InformativeScreenshot="125acd1eccc5806ff2aebe3373977323.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/8Qnu3ClxzU6tosB6xsG85g" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="%Voucher Number" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable ContentHash="BfgD44PJskG7nyRYXZ-gFQ" DesignTimeRectangle="798, 481, 369, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name=' Find' role='text' /&gt;" Guid="458f1cf8-6aeb-44fa-9c1d-e146ea0137ff" InformativeScreenshot="22258ddf3bcf97adcf73baa24d1ce1a8.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/_qwiLeHNpkO9EeZePgFetA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_51" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_52" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show Field... mnemonic F'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="3st6_L556kO-TPXoWBvzAQ" DesignTimeRectangle="108, 171, 104, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Folder ALT l' role='menu' /&gt;&lt;java name='Show Field... mnemonic F' role='menu item' /&gt;" Guid="bc5949a0-9055-465d-a367-8e4b6e9eb541" InformativeScreenshot="125acd1eccc5806ff2aebe3373977323.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/8Qnu3ClxzU6tosB6xsG85g" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_32" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="%Date Invoice Received" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable ContentHash="BfgD44PJskG7nyRYXZ-gFQ" DesignTimeRectangle="798, 481, 369, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name=' Find' role='text' /&gt;" Guid="458f1cf8-6aeb-44fa-9c1d-e146ea0137ff" InformativeScreenshot="22258ddf3bcf97adcf73baa24d1ce1a8.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/_qwiLeHNpkO9EeZePgFetA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_53" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_54" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
                     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -262,7 +346,28 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'PO Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceLPONumber]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Date Invoice Received'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_33" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[Date.Now.ToString(&quot;dd-MMM-yyyy&quot;)]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable ContentHash="JrtPyM8Mqkilv8vjxl16yA" DesignTimeRectangle="434, 194, 135, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Date Invoice Received*' role='text' /&gt;" Guid="5e8f6665-0e68-4418-acc8-0971299c4657" InformativeScreenshot="b4a9a1044df3f7b1586d6135a59d2ae3.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/EhTiAQtgrE-MGDWYdUwE7g" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="434, 170, 135, 24" ElementType="Text" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java cls='FolderPrompt' role='text' check:text='Date Invoice Received' /&gt;" Guid="2b7a6188-f608-473a-b058-3c4434432634" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'PO Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceLPONumber]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="1Un_1P3Bt0ez3C9ivwi6jg" DesignTimeRectangle="657, 223, 72, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI)*' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='PO NumberList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="2ce8d93e-b120-45b0-ba60-90f79da912f3" InformativeScreenshot="6c6da1fa95dee2ffd029ae57deebd4e2.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/m7gKtD4dlkWQZgdjRivW_A" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -282,33 +387,39 @@
                           </uix:VerifyExecutionTypeIntoOptions.Timeout>
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
-                    </uix:NTypeInto>
-                    <If Condition="[in_InvoiceFrom = &quot;Al Qudra&quot;]" DisplayName="Process invoices from 'Al Qudra' by updating liability account." sap:VirtualizedContainerService.HintSize="524,2629" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <If Condition="[in_InvoiceFrom = &quot;Al Qudra&quot;]" DisplayName="Process invoices from 'Al Qudra' by updating liability account." sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="If_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,2400" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,2400" sap2010:WorkflowViewState.IdRef="Sequence_23">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[in_InvoiceFrom]" />
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Folder ALT l'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[in_InvoiceFrom]" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Folder ALT l'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable ContentHash="VDdLaXr330uvaL2jYspsVA" DesignTimeRectangle="105, 31, 45, 30" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Folder*' role='menu' /&gt;" Guid="a5bdd421-817b-4ebb-8d23-e4b644dda3aa" InformativeScreenshot="962e50205f2b95fe4387cb2263876731.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/6Z7zD2oQ7Ui3oAG1H5jUXw" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show Field... mnemonic F'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show Field... mnemonic F'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable ContentHash="3st6_L556kO-TPXoWBvzAQ" DesignTimeRectangle="108, 171, 104, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Folder ALT l' role='menu' /&gt;&lt;java name='Show Field... mnemonic F' role='menu item' /&gt;" Guid="bc5949a0-9055-465d-a367-8e4b6e9eb541" InformativeScreenshot="125acd1eccc5806ff2aebe3373977323.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/8Qnu3ClxzU6tosB6xsG85g" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="%Liability Account" Version="V5">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="%Liability Account" Version="V5">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable ContentHash="BfgD44PJskG7nyRYXZ-gFQ" DesignTimeRectangle="798, 481, 369, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name=' Find' role='text' /&gt;" Guid="458f1cf8-6aeb-44fa-9c1d-e146ea0137ff" InformativeScreenshot="22258ddf3bcf97adcf73baa24d1ce1a8.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/_qwiLeHNpkO9EeZePgFetA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                             </uix:NTypeInto.Target>
@@ -323,7 +434,7 @@
                               </uix:VerifyExecutionTypeIntoOptions>
                             </uix:NTypeInto.VerifyOptions>
                           </uix:NTypeInto>
-                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_23" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_31" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,7 +442,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NKeyboardShortcuts>
-                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_24" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_32" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -339,7 +450,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NKeyboardShortcuts>
-                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Liability Account'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_25" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][d(ctrl)]l[u(ctrl)][u(hk)]" Version="V5">
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Liability Account'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_33" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][d(ctrl)]l[u(ctrl)][u(hk)]" Version="V5">
                             <uix:NKeyboardShortcuts.Target>
                               <uix:TargetAnchorable ContentHash="YvhUYc7sCkSGW19xA3U2oQ" DesignTimeRectangle="308, 194, 192, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Liability Account RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="3f8c7aec-36b4-4dd8-8c5e-852e3e47aae0" InformativeScreenshot="a8cfdcbc9eaee9f7d10c76241e4ce45c.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/6izcTvaJuU6_2mB8asuf2w" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -356,12 +467,12 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NKeyboardShortcuts>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Nsh/Nshama Account FieldFlex'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Nsh/Nshama Account FieldFlex'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable ContentHash="cn9qjw_k8E6FwHdcVwZptw" DesignTimeRectangle="732, 445, 16, 25" ElementType="Button" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='*' role='internal frame' idx='26' /&gt;&lt;java cls='IconButton' role='push button' /&gt;" Guid="92596f83-ee43-44b6-b541-a37546c601f0" InformativeScreenshot="b51d212130631a8e49fcc35876002160.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/bIhjikXnwU67CokbdQsdMA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="1113[k(enter)]" Version="V5">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input-Responsibilities'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="1113[k(enter)]" Version="V5">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable ContentHash="BfgD44PJskG7nyRYXZ-gFQ" DesignTimeRectangle="798, 481, 369, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name=' Find' role='text' /&gt;" Guid="458f1cf8-6aeb-44fa-9c1d-e146ea0137ff" InformativeScreenshot="22258ddf3bcf97adcf73baa24d1ce1a8.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/_qwiLeHNpkO9EeZePgFetA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                             </uix:NTypeInto.Target>
@@ -376,7 +487,7 @@
                               </uix:VerifyExecutionTypeIntoOptions>
                             </uix:NTypeInto.VerifyOptions>
                           </uix:NTypeInto>
-                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_28" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_34" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -387,7 +498,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_24">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -396,7 +507,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_invoiceRecivedData]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_21" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[date.Now.ToString(&quot;dd-MMM-yyyy&quot;)]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="suGU_dRo7kCC9coDnP9jvw" DesignTimeRectangle="781, 223, 77, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Date RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="626ab106-2aac-479f-953a-836c1826ed06" InformativeScreenshot="2ff9d64ddce7f2b7ef57e3b3e79eb7bf.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/JWQfCWZewEOarDYUXnf2QA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -406,9 +517,22 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5" />
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Invoice Num'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_35" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Invoice Num'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="zd4GGfS5OkuNl2Mq82C7eg" DesignTimeRectangle="860, 223, 86, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Num Required' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="62926930-0599-4d2a-b97a-8263da5302bb" InformativeScreenshot="01ef3e902e4467b8e0d2a9ef2e73b198.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/v33v9JQejkSwx_L73MAiFQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -418,8 +542,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Num'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceNumber]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Num'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_22" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceNumber]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="zd4GGfS5OkuNl2Mq82C7eg" DesignTimeRectangle="860, 223, 86, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Num Required' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="62926930-0599-4d2a-b97a-8263da5302bb" InformativeScreenshot="01ef3e902e4467b8e0d2a9ef2e73b198.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/v33v9JQejkSwx_L73MAiFQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -429,16 +559,22 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_25">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Num'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NTypeInto_18" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[New System.Random().Next(100000, 1000000).ToString()]" Version="V5">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Num'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NTypeInto_23" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[New System.Random().Next(100000, 1000000).ToString()]" Version="V5">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable ContentHash="zd4GGfS5OkuNl2Mq82C7eg" DesignTimeRectangle="860, 223, 86, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Num Required' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="62926930-0599-4d2a-b97a-8263da5302bb" InformativeScreenshot="01ef3e902e4467b8e0d2a9ef2e73b198.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/v33v9JQejkSwx_L73MAiFQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                                 <uix:TargetAnchorable.Anchors>
@@ -464,7 +600,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_36" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -472,15 +608,15 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_37" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Invoice Amount'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Invoice Amount'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="88TX27qRsU218lz3_fI6BQ" DesignTimeRectangle="879, 195, 96, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Amount Required' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="a220b4ce-ccad-4fc6-aab9-0ce007b43018" InformativeScreenshot="1b119809c69dd8fc150178e44685e535.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/2gXXW0AYPkC-4Kpk1XH8ig" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -490,8 +626,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Amount'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceTotalAmount]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Invoice Amount'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_24" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceTotalAmount]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="88TX27qRsU218lz3_fI6BQ" DesignTimeRectangle="879, 195, 96, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Invoice Amount Required' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="a220b4ce-ccad-4fc6-aab9-0ce007b43018" InformativeScreenshot="1b119809c69dd8fc150178e44685e535.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/2gXXW0AYPkC-4Kpk1XH8ig" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -501,16 +643,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
-                    </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_38" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -518,31 +658,39 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_39" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_40" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_41" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GL Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_42" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GL Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_34" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="mIfhNUl9Fk-yGLTz2QbGkQ" DesignTimeRectangle="1540, 194, 116, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java name='GL Date RequiredList of Values' role='text' /&gt;" FuzzyAccuracy="0.9" Guid="a494ded6-7ec4-460e-8e14-83c286fd0881" InformativeScreenshot="1ecfdb59479a6000a94d8ab6384c7220.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/4MG21pmY0EKPNyYj1GxpzA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -552,8 +700,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'GL Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_invoiceRecivedData]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'GL Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_25" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[date.Now.ToString(&quot;dd-MMM-yyyy&quot;)]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="mIfhNUl9Fk-yGLTz2QbGkQ" DesignTimeRectangle="1540, 194, 116, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' role='internal frame' /&gt;&lt;java name='GL Date RequiredList of Values' role='text' /&gt;" FuzzyAccuracy="0.9" Guid="a494ded6-7ec4-460e-8e14-83c286fd0881" InformativeScreenshot="1ecfdb59479a6000a94d8ab6384c7220.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/4MG21pmY0EKPNyYj1GxpzA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -563,16 +717,22 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
-                    </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_43" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payment Curr'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payment Curr'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NClick_35" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="5LXflDEz8EejsVYhfd_k1Q" DesignTimeRectangle="1568, 194, 107, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Payment Curr RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="f47b6dae-56df-48ea-8d10-4f4746198e11" InformativeScreenshot="c2858aa412e277f7feefd1b935c415fd.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/ZME5yahJKE6TjrRcQ3UYiQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -582,8 +742,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Payment Curr'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceCurrency]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Payment Curr'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceCurrency]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="5LXflDEz8EejsVYhfd_k1Q" DesignTimeRectangle="1568, 194, 107, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Payment Curr RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="f47b6dae-56df-48ea-8d10-4f4746198e11" InformativeScreenshot="c2858aa412e277f7feefd1b935c415fd.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/ZME5yahJKE6TjrRcQ3UYiQ" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -593,24 +759,30 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_44" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_45" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Description'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Description'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NClick_36" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="IYqX9cRLWEmHw-DzBQTzHA" DesignTimeRectangle="1302, 194, 192, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Description' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="d36d5123-e4a0-410e-ae79-572583443020" InformativeScreenshot="647e0f6a1b151433e880ea19ef598be5.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/pXYf_foZ50apuveqbJ2j5w" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -620,8 +792,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceDescription]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_27" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_InvoiceSummary]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="IYqX9cRLWEmHw-DzBQTzHA" DesignTimeRectangle="1302, 194, 192, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Description' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="d36d5123-e4a0-410e-ae79-572583443020" InformativeScreenshot="647e0f6a1b151433e880ea19ef598be5.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/pXYf_foZ50apuveqbJ2j5w" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -638,31 +816,31 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_46" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_47" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_48" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Terms Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,194" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Terms Date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="HdnaUh-P20ONK4OzgKuzxg" DesignTimeRectangle="1767, 194, 115, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Terms Date RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="d44a2dab-8c7c-456f-9895-097636cb29ba" InformativeScreenshot="f75427f3b49366d8d39a4d52169bc7e0.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/yJI3tk8gmk63oM132tJAuA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -672,8 +850,14 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Terms Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[in_invoiceRecivedData]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Terms Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_28" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="[date.Now.ToString(&quot;dd-MMM-yyyy&quot;)]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="HdnaUh-P20ONK4OzgKuzxg" DesignTimeRectangle="1767, 194, 115, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Terms Date RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="d44a2dab-8c7c-456f-9895-097636cb29ba" InformativeScreenshot="f75427f3b49366d8d39a4d52169bc7e0.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/yJI3tk8gmk63oM132tJAuA" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -690,15 +874,15 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_17" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_49" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Terms'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="30" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Terms'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_29" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="30" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="uJNbm5VA5U6wo9_qAHxjow" DesignTimeRectangle="1728, 194, 154, 24" ElementType="InputBox" ElementVisibilityArgument="Visible" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Terms RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="86089682-6747-46bf-877a-77a78012f471" InformativeScreenshot="ad793bfc52e560c3ec0824f387220f99.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/OdFHQUVO2UyOOeJV_NALXw" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -708,16 +892,22 @@
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
-                    </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_18" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_50" InteractionMode="HardwareEvents" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NKeyboardShortcuts>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Payment Method'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,246" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="Wire" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Payment Method'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,57" sap2010:WorkflowViewState.IdRef="NTypeInto_30" InteractionMode="SameAsCard" ScopeIdentifier="95a96488-1133-4d86-ba60-49dae7ce96cc" Text="Wire" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="ikQENOQjOkiQmu6SpZu7Sw" DesignTimeRectangle="1738, 194, 144, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.9" FuzzySelectorArgument="&lt;java name='Invoice Workbench (AP Payment - NMI) - *' matching:name='fuzzy' fuzzylevel:name='0.0' role='internal frame' /&gt;&lt;java name='Payment Method RequiredList of Values' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' /&gt;" Guid="05a65af5-e4ca-4407-9baf-81e8048c8334" InformativeScreenshot="9c63703a0c6bb6ebdc2489eab0fa3492.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/hr2Tdk-lS0ufc0u33WLpJg" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -729,7 +919,7 @@
                       </uix:NTypeInto.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -888,6 +1078,8 @@
                                 </uix:NClick>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_MatchToReciept - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_MatchToReciept.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_MatchToReciept.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_InvoiceExtractedTableLineItems">[in_dt_InvoiceExtractedTableLineItems]</InArgument>
+                                    <InArgument x:TypeArguments="x:Boolean" x:Key="in_isInvoiceLineItemsMorethan1">[in_isInvoiceLineItemsMorethan1]</InArgument>
                                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceTableQuantity">[in_InvoiceTableQuantity]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
@@ -927,7 +1119,7 @@
                                     <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceVatAmount">[in_InvoiceVatAmount]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <If Condition="[in_InvoiceFrom = &quot;Al Qudra&quot;]" sap:VirtualizedContainerService.HintSize="452,1887" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If Condition="[in_InvoiceSummary.ToLower.Trim.Contains(&quot;plot 35&quot;) OrElse in_InvoiceSummary.ToLower.Trim.EndsWith(&quot;plot 35&quot;)]" sap:VirtualizedContainerService.HintSize="452,1887" sap2010:WorkflowViewState.IdRef="If_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1048,7 +1240,7 @@
                                     <uix:TargetAnchorable ContentHash="xp0WAqutA0uSuLjxesJNJQ" DesignTimeRectangle="744, 90, 16, 16" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Invoice Batches *' role='internal frame' /&gt;&lt;java cls='ToolBar' role='tool bar' /&gt;&lt;java idx='3' role='push button' /&gt;" Guid="8c2dcde1-5d2d-473a-be3f-bb33539fc5e3" InformativeScreenshot="97c69af43286c47d975143706bf1fffe.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/3l6ECJjduUeZBNzdw7-YVw" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), in_invoiceName + &quot;.pdf&quot;)}]" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt;&lt;br/&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + in_InvoiceNumber + &quot;&lt;/b&gt; has been rejected due to bank account number mismatch.&lt;/p&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xD;&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="452,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Bank Account Not Matched" To="Automation@nshama.ae" UseISConnection="False">
+                                <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), in_invoiceName + &quot;.pdf&quot;)}]" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt;&lt;br/&gt;&quot; +&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + in_InvoiceNumber + &quot;&lt;/b&gt; has been rejected due to bank account number mismatch.&lt;/p&gt;&quot; +&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="452,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Bank Account Not Matched" To="Automation@nshama.ae" UseISConnection="False">
                                   <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                                     <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
                                       <usau:BackupSlot.BackupValues>
@@ -1069,14 +1261,20 @@
                       <uix:NCheckState.Target>
                         <uix:TargetAnchorable ContentHash="9Asuob2p-kS1Yaic15d7hA" DesignTimeRectangle="850, 526, 266, 36" ElementType="Text" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;java name='Error *: Could not reserve record.' role='internal frame' /&gt;&lt;java name='* Could not reserve record.' role='label' /&gt;" Guid="02b6af7c-c237-4427-92ee-8e59b6250537" InformativeScreenshot="5577f0f374ff096435cb547353d27b03.jpg" IsResponsive="True" Reference="qUD_TysPEUmxCPTTCdyhAg/zw2Fm7-e10O73O2OjJl9yg" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete" />
                       </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.OCREngine>
-                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
                   <ActivityFunc.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                   </ActivityFunc.Argument>
                 </ActivityFunc>
               </uix:NApplicationCard.OCREngine>

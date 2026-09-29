@@ -1,5 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_InvoiceSummary" Type="InArgument(x:String)" />
+    <x:Property Name="in_isInvoiceLineItemsMorethan1" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_distUsers" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_dt_InvoiceExtractedTableItems" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_InvoiceTo" Type="InArgument(x:String)" />
     <x:Property Name="in_InvoiceFrom" Type="InArgument(x:String)" />
@@ -147,9 +150,11 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1494,3360" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1913,3360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="is_PreviousHistoryFound" />
       <Variable x:TypeArguments="x:String" Name="refOrderNumber" />
@@ -166,9 +171,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="523,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="523,89" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="523,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="548,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="548,89" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,685" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -238,15 +243,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <If Condition="[invoiceLopNumber isnot Nothing AndAlso invoiceLopNumber &lt;&gt;&quot;&quot;]" DisplayName="Automates AP invoice processing, including validation, PO handling, and approvals." sap:VirtualizedContainerService.HintSize="523,2939" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[invoiceLopNumber isnot Nothing AndAlso invoiceLopNumber &lt;&gt;&quot;&quot;]" DisplayName="Automates AP invoice processing, including validation, PO handling, and approvals." sap:VirtualizedContainerService.HintSize="548,2939" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="521,2233" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="546,2233" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ValidatePreviousHistory - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ValidatePreviousHistory.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ValidatePreviousHistory.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ValidatePreviousHistory - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ValidatePreviousHistory.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ValidatePreviousHistory.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_LOPNumber">[invoiceLopNumber]</InArgument>
@@ -256,23 +261,23 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_OreviousHistoryTotalAmount">[previousHistoryTotalAmount]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_RunJava - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_RunJava.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_RunJava.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_RunJava - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_RunJava.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_RunJava.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_POReciving - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_PORecivingNMI.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_POReciving.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_POReciving - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_PORecivingNMI.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_POReciving.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceTo">[in_InvoiceTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceTo">[invoiceTo]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_GRNReceiving - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_GRNReceiving.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_GRNReceiving.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_GRNReceiving - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_GRNReceiving.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_GRNReceiving.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_InvoiceExtractedTableItems">[in_dt_InvoiceExtractedTableItems]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceLPONumber">[invoiceLopNumber]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_FindPurchaseOrder - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_FindPurchaseOrder.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_FindPurchaseOrder.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_FindPurchaseOrder - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_FindPurchaseOrder.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_FindPurchaseOrder.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFrom">[in_InvoiceFrom]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -281,8 +286,9 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_LopNumber">[invoiceLopNumber]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_RequitionSummary - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_RequitionSummary.xaml)" sap:VirtualizedContainerService.HintSize="487,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_RequitionSummary.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_RequitionSummary - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_RequitionSummary.xaml)" sap:VirtualizedContainerService.HintSize="512,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_RequitionSummary.xaml">
             <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_distUsers">[in_distUsers]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_RefNo">[refOrderNumber]</InArgument>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="out_SecondApproval">[secondApproval]</OutArgument>
@@ -295,21 +301,24 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceName">[invoiceName]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If Condition="[firstApproval AndAlso secondApproval]" DisplayName="Check if both approvals are true" sap:VirtualizedContainerService.HintSize="487,1111" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[firstApproval AndAlso secondApproval]" DisplayName="Check if both approvals are true" sap:VirtualizedContainerService.HintSize="512,1111" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,405" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="466,405" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ApPaymentNMI - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentNMI.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentNMI.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ApPaymentNMI - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentNMI.xaml)" sap:VirtualizedContainerService.HintSize="432,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentNMI.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ApPaymentBatchInvoice - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentBatchInvoice.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentBatchInvoice.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="oracleDesktop_ApPaymentBatchInvoice - Invoke Workflow File (DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentBatchInvoice.xaml)" sap:VirtualizedContainerService.HintSize="432,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="DeveloperFramework\oracleDesktopInstance\oracleDesktop_ApPaymentBatchInvoice.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceSummary">[in_InvoiceSummary]</InArgument>
+                    <InArgument x:TypeArguments="x:Boolean" x:Key="in_isInvoiceLineItemsMorethan1">[in_isInvoiceLineItemsMorethan1]</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_InvoiceExtractedTableLineItems">[in_dt_InvoiceExtractedTableItems]</InArgument>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                     <OutArgument x:TypeArguments="x:String" x:Key="out_VoucherNumber">[out_VoucherNumber]</OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceVatAmount">[invoiceVatAmount]</InArgument>
@@ -329,14 +338,14 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,576" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="466,576" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Invoice Rejected By Approver&quot;]" />
-                <ui:SendOutlookMail Account="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), invoiceName + &quot;.pdf&quot;)}]" Bcc="harshith@nshama.ae" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt; &lt;br/&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + invoiceNumber + &quot;&lt;/b&gt; has been rejected by approved.&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xD;&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Invoiced Rejected By Approver" To="Automation@nshama.ae" UseISConnection="False">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="432,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Invoice Rejected By Approver&quot;]" />
+                <ui:SendOutlookMail Account="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), invoiceName + &quot;.pdf&quot;)}]" Bcc="harshith@nshama.ae" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt; &lt;br/&gt;&quot; +&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + invoiceNumber + &quot;&lt;/b&gt; has been rejected by approved.&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&quot; +&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="432,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Invoiced Rejected By Approver" To="Automation@nshama.ae" UseISConnection="False">
                   <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                     <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
                       <usau:BackupSlot.BackupValues>
@@ -348,21 +357,21 @@
                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                   </ui:SendOutlookMail.Files>
                 </ui:SendOutlookMail>
-                <Throw Exception="[new BusinessRuleException(&quot;Invoice Rejected&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                <Throw Exception="[new BusinessRuleException(&quot;Invoice Rejected&quot;)]" sap:VirtualizedContainerService.HintSize="432,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Sequence>
             </If.Else>
           </If>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="521,576" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="546,576" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="487,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;No LPO Number&quot;]" />
-          <ui:SendOutlookMail Account="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), invoiceName + &quot;.pdf&quot;)}]" Bcc="harshith@nshama.ae" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt; &lt;br/&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + invoiceNumber + &quot;&lt;/b&gt; has been rejected due to no LPO number found.&lt;/p&gt;&quot; +&#xD;&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xD;&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="487,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Invoiced Rejected Due To No LPO Number" To="Automation@nshama.ae" UseISConnection="False">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;No LPO Number&quot;]" />
+          <ui:SendOutlookMail Account="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" AttachmentsCollection="[New String() {System.IO.Path.Combine(in_Config(&quot;OutputFolderPath&quot;).ToString(), Date.Now.Year.ToString(), Date.Now.AddMonths(0).ToString(&quot;MMM&quot;), Date.Now.ToString(&quot;dd-MMM-yyyy&quot;), invoiceName + &quot;.pdf&quot;)}]" Bcc="harshith@nshama.ae" Body="[&quot;&lt;html&gt;&lt;body&gt;&quot; +&#xA;&quot;&lt;p&gt;Greetings,&lt;/p&gt; &lt;br/&gt;&quot; +&#xA;&quot;&lt;p&gt;Invoice with Number &lt;b&gt;&quot; + invoiceNumber + &quot;&lt;/b&gt; has been rejected due to no LPO number found.&lt;/p&gt;&quot; +&#xA;&quot;&lt;p&gt;Regards,&lt;br/&gt;&lt;br/&gt;Automation Team&lt;/p&gt;&quot; +&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="512,227" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Invoiced Rejected Due To No LPO Number" To="Automation@nshama.ae" UseISConnection="False">
             <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
               <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
                 <usau:BackupSlot.BackupValues>
@@ -374,7 +383,7 @@
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendOutlookMail.Files>
           </ui:SendOutlookMail>
-          <Throw Exception="[new BusinessRuleException(&quot;LPO Number is empty&quot;)]" sap:VirtualizedContainerService.HintSize="487,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          <Throw Exception="[new BusinessRuleException(&quot;LPO Number is empty&quot;)]" sap:VirtualizedContainerService.HintSize="511,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
         </Sequence>
       </If.Else>
     </If>
