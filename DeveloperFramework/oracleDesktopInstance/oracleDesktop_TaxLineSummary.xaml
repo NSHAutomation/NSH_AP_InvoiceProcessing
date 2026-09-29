@@ -3,6 +3,7 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_InvoiceFrom" Type="InArgument(x:String)" />
     <x:Property Name="in_InvoiceVatAmount" Type="InArgument(x:String)" />
+    <x:Property Name="in_InvoiceSummary" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -148,7 +149,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[in_InvoiceFrom = &quot;Al Qudra&quot;]" DisplayName="Set tax status for Al Qudra invoices" sap:VirtualizedContainerService.HintSize="452,526" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[in_InvoiceSummary.ToLower.Trim.Contains(&quot;plot 35&quot;) OrElse in_InvoiceSummary.ToLower.Trim.EndsWith(&quot;plot 35&quot;)]" DisplayName="Set tax status for Al Qudra invoices" sap:VirtualizedContainerService.HintSize="452,526" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

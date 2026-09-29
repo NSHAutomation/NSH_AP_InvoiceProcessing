@@ -111,7 +111,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="oracleDesktop_PORecivingNMI" sap:VirtualizedContainerService.HintSize="1877,3057" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="oracleDesktop_PORecivingNMI" sap:VirtualizedContainerService.HintSize="1913,3057" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,7 +148,7 @@
                         <uix:TargetAnchorable ContentHash="v3jL7bo3OUmGvAmbxzvH1A" DesignTimeRectangle="157, 63, 26, 22" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;java name='Switch Responsibility*' role='push button' /&gt;" Guid="ec25c772-cd36-482c-999b-0df4532d80f0" InformativeScreenshot="3c5104b971bbd56a257f17cab6010450.jpg" Reference="qUD_TysPEUmxCPTTCdyhAg/fn_CbP58aEmatArDBlK4jg" ScopeSelectorArgument="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - NMDBP' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:IfElseIfV2 Condition="[in_InvoiceTo.ToLower.Contains(&quot;nshimi&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="452,1771" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                    <ui:IfElseIfV2 Condition="[in_InvoiceTo.trim.ToLower.Contains(&quot;nshmi&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="452,1771" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                       <ui:IfElseIfV2.Else>
                         <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
@@ -160,7 +160,7 @@
                       </ui:IfElseIfV2.Else>
                       <ui:IfElseIfV2.ElseIfs>
                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_InvoiceTo.ToLower.Contains(&quot;symphony&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_InvoiceTo.trim.ToLower.Contains(&quot;symphony&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                             <ui:IfElseIfBlock.Then>
                               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,472" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -187,7 +187,7 @@
                               </Sequence>
                             </ui:IfElseIfBlock.Then>
                           </ui:IfElseIfBlock>
-                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_InvoiceTo.ToLower.Contains(&quot;nshama&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_InvoiceTo.ToLower.trim.Contains(&quot;nshama&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
                             <ui:IfElseIfBlock.Then>
                               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,472" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                 <sap:WorkflowViewStateService.ViewState>
